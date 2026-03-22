@@ -1,17 +1,18 @@
 # Weka Classification & Regression Reference
 
-All classifiers listed here are compatible with `run_model.sh`. Set `"task"` to `"classification"` or `"regression"` and the `"algorithm"` field to the full class name.
+All classifiers listed here are compatible with `train_models.sh`. Set `"task"` to `"classification"` or `"regression"` and each model's `"algorithm"` field to the full class name.
 
 ```json
 {
   "task": "classification",
-  "algorithm": "weka.classifiers.trees.J48",
-  "options": ["-C", "0.25", "-M", "2"],
   "evaluation": {
     "mode": "cross-validation",
     "folds": 10,
     "dataset": "/absolute/path/to/data.arff"
-  }
+  },
+  "models": [
+    { "name": "J48", "algorithm": "weka.classifiers.trees.J48", "options": ["-C", "0.25", "-M", "2"] }
+  ]
 }
 ```
 

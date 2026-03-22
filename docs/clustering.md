@@ -1,16 +1,17 @@
 # Weka Clustering Reference
 
-All clusterers listed here are compatible with `run_model.sh`. Set `"task"` to `"clustering"` and `"evaluation.mode"` to `"dataset"`.
+All clusterers listed here are compatible with `train_models.sh`. Set `"task"` to `"clustering"` and `"evaluation.mode"` to `"dataset"`.
 
 ```json
 {
   "task": "clustering",
-  "algorithm": "weka.clusterers.SimpleKMeans",
-  "options": ["-N", "3", "-S", "42"],
   "evaluation": {
     "mode": "dataset",
     "dataset": "/absolute/path/to/data.arff"
-  }
+  },
+  "models": [
+    { "name": "KMeans3", "algorithm": "weka.clusterers.SimpleKMeans", "options": ["-N", "3", "-S", "42"] }
+  ]
 }
 ```
 

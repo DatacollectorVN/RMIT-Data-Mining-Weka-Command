@@ -1,0 +1,26 @@
+{
+    "task": "regression",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-red-weka.csv"
+    },
+    "models": [
+        {
+            "name": "LinearRegression",
+            "algorithm": "weka.classifiers.functions.LinearRegression",
+            "options": []
+        },
+        {
+            "name": "SMOreg",
+            "algorithm": "weka.classifiers.functions.SMOreg",
+            "options": []
+        },
+        {
+            "name": "IBk",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "3"]
+        }
+    ]
+}

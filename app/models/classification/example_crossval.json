@@ -1,10 +1,15 @@
 {
   "task": "classification",
-  "algorithm": "weka.classifiers.rules.OneR",
-  "options": [],
   "evaluation": {
     "mode": "cross-validation",
     "folds": 10,
     "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff"
-  }
+  },
+  "models": [
+    {
+      "name": "OneR",
+      "algorithm": "weka.classifiers.rules.OneR",
+      "options": []
+    }
+  ]
 }

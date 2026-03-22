@@ -1,0 +1,17 @@
+{
+  "task": "combine",
+  "input": "file0.arff",
+  "is_debug": true,
+  "steps": [
+    {
+      "name": "append_file1",
+      "type": "append",
+      "file": "file1.arff"
+    },
+    {
+      "name": "append_file2",
+      "type": "append",
+      "file": "file2.arff"
+    }
+  ]
+}

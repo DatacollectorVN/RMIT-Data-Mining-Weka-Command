@@ -1,6 +1,6 @@
 # Weka Model Visualization Guide
 
-After running `run_model.sh`, a `.model` file is saved alongside the report. This guide explains how to load it into the Weka GUI and use every visualization available.
+After running `train_models.sh`, a `.model` file is saved alongside the report inside each model's named subfolder. This guide explains how to load it into the Weka GUI and use every visualization available.
 
 ## Output Structure
 

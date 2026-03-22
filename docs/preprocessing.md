@@ -1,6 +1,6 @@
 # Weka Preprocessor Reference
 
-All filters listed here are compatible with `run_data.sh`. Set the `filter` field to the full class name and pass flags as individual strings in the `options` array.
+All filters listed here are compatible with `process_data.sh` (`task: preprocess`). Set the `filter` field to the full class name and pass flags as individual strings in the `options` array.
 
 ```json
 {

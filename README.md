@@ -2,8 +2,8 @@
 
 A bash-based toolkit for Weka experiments. Two entry points cover the full workflow:
 
-- **`app/run_data.sh`** — preprocess raw ARFF files through a configurable filter pipeline
-- **`app/run_model.sh`** — run classification, regression, clustering, or association tasks on processed data
+- **`app/process_data.sh`** — preprocess raw ARFF files through a configurable filter pipeline, or combine multiple ARFF files by appending
+- **`app/train_models.sh`** — run multiple models in one pass for classification, regression, clustering, or association tasks
 
 Both scripts are configured via JSON files and save all outputs to versioned, timestamped paths automatically.
 
@@ -15,10 +15,13 @@ Both scripts are configured via JSON files and save all outputs to versioned, ti
 .
 ├── app/
 │   ├── weka.jar                              # Weka application JAR
-│   ├── run_data.sh                           # Data preprocessing pipeline runner
-│   ├── run_model.sh                          # Model training / evaluation runner
+│   ├── process_data.sh                       # Data pipeline runner (preprocess + combine)
+│   ├── train_models.sh                       # Multi-model training / evaluation runner
 │   ├── data/
-│   │   └── example_preprocess.json           # Preprocessing pipeline config example
+│   │   ├── preprocess/
+│   │   │   └── example_preprocess.json       # Preprocess pipeline config example
+│   │   └── combine/
+│   │       └── example_combine.json          # Combine (append) pipeline config example
 │   ├── models/
 │   │   ├── classification/
 │   │   │   ├── example_crossval.json
@@ -66,24 +69,35 @@ Detailed parameter references for all supported algorithms and filters:
 
 ---
 
-## Data Preprocessing — `run_data.sh`
+## Data Pipeline — `process_data.sh`
+
+Handles two tasks controlled by the `"task"` field in the config.
 
 ### Usage
 
 ```bash
-bash app/run_data.sh <path/to/config.json>
+bash app/process_data.sh <path/to/config.json>
 ```
 
-**Example:**
+**Examples:**
 
 ```bash
-bash app/run_data.sh app/data/example_preprocess.json
+# Preprocess
+bash app/process_data.sh app/data/preprocess/example_preprocess.json
+
+# Combine (append)
+bash app/process_data.sh app/data/combine/example_combine.json
 ```
 
-### Config Schema
+---
+
+### Task: `preprocess` — apply sequential Weka filters
+
+**Config schema:**
 
 ```json
 {
+  "task": "preprocess",
   "input": "/absolute/path/to/data.arff",
   "is_debug": false,
   "steps": [
@@ -108,13 +122,59 @@ bash app/run_data.sh app/data/example_preprocess.json
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
+| `task` | string | yes | Must be `"preprocess"` |
 | `input` | string | yes | Absolute path to input `.arff` file |
 | `is_debug` | boolean | no | If `true`, saves each step's output separately (default: `false`) |
 | `steps[].name` | string | yes | Label used in filenames and logs |
 | `steps[].filter` | string | yes | Full Weka filter class name |
 | `steps[].options` | array | no | Filter options passed directly to Weka |
 
-### Output Paths
+### Common Weka Filters
+
+| Purpose | Filter Class |
+|---------|-------------|
+| Replace missing values | `weka.filters.unsupervised.attribute.ReplaceMissingValues` |
+| Normalize attributes (0–1) | `weka.filters.unsupervised.attribute.Normalize` |
+| Standardize attributes (mean=0) | `weka.filters.unsupervised.attribute.Standardize` |
+| Discretize numeric attributes | `weka.filters.unsupervised.attribute.Discretize` |
+| Remove attributes by index | `weka.filters.unsupervised.attribute.Remove` |
+| Nominal to binary encoding | `weka.filters.unsupervised.attribute.NominalToBinary` |
+| String to nominal | `weka.filters.unsupervised.attribute.StringToNominal` |
+| Resample (balance/undersample) | `weka.filters.supervised.instance.Resample` |
+| SMOTE (oversample minority) | `weka.filters.supervised.instance.SMOTE` |
+
+---
+
+### Task: `combine` — append ARFF files sequentially
+
+Starts with the `input` file and appends each `steps[].file` in order. All files must share the same attribute schema.
+
+**Config schema:**
+
+```json
+{
+  "task": "combine",
+  "input": "/absolute/path/to/base.arff",
+  "is_debug": false,
+  "steps": [
+    { "name": "append_part1", "type": "append", "file": "/absolute/path/to/part1.arff" },
+    { "name": "append_part2", "type": "append", "file": "/absolute/path/to/part2.arff" }
+  ]
+}
+```
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `task` | string | yes | Must be `"combine"` |
+| `input` | string | yes | Absolute path to the base `.arff` file |
+| `is_debug` | boolean | no | If `true`, saves each step's intermediate file (default: `false`) |
+| `steps[].name` | string | yes | Label used in filenames and logs |
+| `steps[].type` | string | yes | Currently only `"append"` is supported |
+| `steps[].file` | string | yes | Absolute path to the `.arff` file to append |
+
+---
+
+### Output Paths (both tasks)
 
 **Normal run** (`is_debug: false`):
 ```
@@ -136,68 +196,61 @@ bash app/run_data.sh app/data/example_preprocess.json
         003_remove_attr_20260322_143022.arff
 ```
 
-### Common Weka Filters
-
-| Purpose | Filter Class |
-|---------|-------------|
-| Replace missing values | `weka.filters.unsupervised.attribute.ReplaceMissingValues` |
-| Normalize attributes (0–1) | `weka.filters.unsupervised.attribute.Normalize` |
-| Standardize attributes (mean=0) | `weka.filters.unsupervised.attribute.Standardize` |
-| Discretize numeric attributes | `weka.filters.unsupervised.attribute.Discretize` |
-| Remove attributes by index | `weka.filters.unsupervised.attribute.Remove` |
-| Nominal to binary encoding | `weka.filters.unsupervised.attribute.NominalToBinary` |
-| String to nominal | `weka.filters.unsupervised.attribute.StringToNominal` |
-| Resample (balance/undersample) | `weka.filters.supervised.instance.Resample` |
-| SMOTE (oversample minority) | `weka.filters.supervised.instance.SMOTE` |
-
 ---
 
-## Model Training — `run_model.sh`
+## Model Training — `train_models.sh`
 
 ### Usage
 
 ```bash
-bash app/run_model.sh <path/to/config.json>
+bash app/train_models.sh <path/to/config.json>
 ```
 
 **Examples:**
 
 ```bash
-# Classification
-bash app/run_model.sh app/models/classification/example_crossval.json
+# Classification (multiple models in one run)
+bash app/train_models.sh app/models/classification/config.json
 
 # Clustering
-bash app/run_model.sh app/models/clustering/example_kmeans.json
+bash app/train_models.sh app/models/clustering/example_kmeans.json
 
 # Association rules
-bash app/run_model.sh app/models/association/example_apriori.json
+bash app/train_models.sh app/models/association/example_apriori.json
 ```
 
-Each run saves output to:
+Each run creates a timestamped directory and gives every model its own named subfolder:
 ```
 .rmit_reports/20260322/20260322_143022/
-  report_classification_J48.txt    ← evaluation metrics
-  config.json                      ← copy of the config used
-  model_classification_J48.model   ← serialized model (loadable in Weka GUI)
+  J48/
+    config.json       ← copy of the config used
+    J48.txt           ← evaluation metrics
+    J48.model         ← serialized model (loadable in Weka GUI)
+  NaiveBayes/
+    config.json
+    NaiveBayes.txt
+    NaiveBayes.model
 ```
 
-Set `"save_model": false` in the config to skip saving the model file. See [`docs/model_visualization.md`](docs/model_visualization.md) for how to load and visualize the saved model in Weka Explorer.
+Set `"save_model": false` at the top level to skip saving `.model` files for every model, or set `"save_model": true|false` on an individual `models[]` entry to override the default for that model only. See [`docs/model_visualization.md`](docs/model_visualization.md) for how to load and visualize saved models in Weka Explorer.
 
 ### Config Schema
 
-All model configs share the same structure. The `task` field controls routing.
+The config defines shared evaluation settings once and lists all models to run.
 
 **Classification / Regression — Cross-validation:**
 ```json
 {
   "task": "classification",
-  "algorithm": "weka.classifiers.trees.J48",
-  "options": ["-C", "0.25", "-M", "2"],
   "evaluation": {
     "mode": "cross-validation",
     "folds": 10,
     "dataset": "/absolute/path/to/data.arff"
-  }
+  },
+  "models": [
+    { "name": "J48",       "algorithm": "weka.classifiers.trees.J48",       "options": ["-C", "0.25", "-M", "2"] },
+    { "name": "NaiveBayes","algorithm": "weka.classifiers.bayes.NaiveBayes","options": [] }
+  ]
 }
 ```
 
@@ -205,13 +258,14 @@ All model configs share the same structure. The `task` field controls routing.
 ```json
 {
   "task": "classification",
-  "algorithm": "weka.classifiers.trees.J48",
-  "options": ["-C", "0.25", "-M", "2"],
   "evaluation": {
     "mode": "train-test",
     "train_file": "/absolute/path/to/train.arff",
     "test_file": "/absolute/path/to/test.arff"
-  }
+  },
+  "models": [
+    { "name": "J48", "algorithm": "weka.classifiers.trees.J48", "options": ["-C", "0.25", "-M", "2"] }
+  ]
 }
 ```
 
@@ -219,12 +273,14 @@ All model configs share the same structure. The `task` field controls routing.
 ```json
 {
   "task": "clustering",
-  "algorithm": "weka.clusterers.SimpleKMeans",
-  "options": ["-N", "3", "-S", "10"],
   "evaluation": {
     "mode": "dataset",
     "dataset": "/absolute/path/to/data.arff"
-  }
+  },
+  "models": [
+    { "name": "KMeans3", "algorithm": "weka.clusterers.SimpleKMeans", "options": ["-N", "3", "-S", "10"] },
+    { "name": "KMeans5", "algorithm": "weka.clusterers.SimpleKMeans", "options": ["-N", "5", "-S", "10"] }
+  ]
 }
 ```
 
@@ -232,25 +288,28 @@ All model configs share the same structure. The `task` field controls routing.
 ```json
 {
   "task": "association",
-  "algorithm": "weka.associations.Apriori",
-  "options": ["-N", "10", "-C", "0.9"],
   "evaluation": {
     "mode": "dataset",
     "dataset": "/absolute/path/to/data.arff"
-  }
+  },
+  "models": [
+    { "name": "Apriori", "algorithm": "weka.associations.Apriori", "options": ["-N", "10", "-C", "0.9"] }
+  ]
 }
 ```
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `task` | string | yes | `classification`, `regression`, `clustering`, or `association` |
-| `algorithm` | string | yes | Full Weka class name |
-| `options` | array | no | Algorithm options passed directly to Weka |
+| `save_model` | boolean | no | Top-level: default for all models (default: `true`). Per-model `models[].save_model` overrides for that classifier only. |
 | `evaluation.mode` | string | yes | `cross-validation`, `train-test`, or `dataset` |
 | `evaluation.folds` | number | no | Folds for cross-validation (default: `10`) |
 | `evaluation.dataset` | string | varies | Absolute path to `.arff` file |
 | `evaluation.train_file` | string | train-test | Absolute path to training `.arff` file |
 | `evaluation.test_file` | string | train-test | Absolute path to testing `.arff` file |
+| `models[].name` | string | yes | Short label — used as subfolder name and filename prefix |
+| `models[].algorithm` | string | yes | Full Weka class name |
+| `models[].options` | array | no | Algorithm options passed directly to Weka |
 
 ### Common Algorithms
 

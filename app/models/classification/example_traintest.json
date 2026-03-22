@@ -1,10 +1,15 @@
 {
   "task": "classification",
-  "algorithm": "weka.classifiers.trees.J48",
-  "options": ["-C", "0.25", "-M", "2"],
   "evaluation": {
     "mode": "train-test",
     "train_file": "/absolute/path/to/train.arff",
     "test_file": "/absolute/path/to/test.arff"
-  }
+  },
+  "models": [
+    {
+      "name": "J48",
+      "algorithm": "weka.classifiers.trees.J48",
+      "options": ["-C", "0.25", "-M", "2"]
+    }
+  ]
 }

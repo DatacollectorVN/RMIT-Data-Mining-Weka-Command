@@ -1,20 +1,21 @@
 # Weka Association Rules Reference
 
-All association algorithms listed here are compatible with `run_model.sh`. Set `"task"` to `"association"` and `"evaluation.mode"` to `"dataset"`.
+All association algorithms listed here are compatible with `train_models.sh`. Set `"task"` to `"association"` and `"evaluation.mode"` to `"dataset"`.
 
 ```json
 {
   "task": "association",
-  "algorithm": "weka.associations.Apriori",
-  "options": ["-N", "10", "-C", "0.9"],
   "evaluation": {
     "mode": "dataset",
     "dataset": "/absolute/path/to/data.arff"
-  }
+  },
+  "models": [
+    { "name": "Apriori", "algorithm": "weka.associations.Apriori", "options": ["-N", "10", "-C", "0.9"] }
+  ]
 }
 ```
 
-> **Important:** Association rule mining requires **nominal (categorical) attributes**. Numeric attributes must be discretized beforehand using `run_data.sh` with `weka.filters.unsupervised.attribute.Discretize`.
+> **Important:** Association rule mining requires **nominal (categorical) attributes**. Numeric attributes must be discretized beforehand using `process_data.sh` (`task: preprocess`) with `weka.filters.unsupervised.attribute.Discretize`.
 
 > **Tip:** Run `bash app/utils/model_helper.sh <algorithm.class.Name>` to print the full option list directly from the JAR.
 
@@ -177,7 +178,7 @@ A wrapper that applies a filter to the data before running an association algori
 
 ## Data Requirements
 
-Association rule mining in Weka requires nominal data. Use `run_data.sh` to prepare your dataset:
+Association rule mining in Weka requires nominal data. Use `process_data.sh` (`task: preprocess`) to prepare your dataset:
 
 ```json
 {
@@ -211,7 +212,7 @@ Association rule mining in Weka requires nominal data. Use `run_data.sh` to prep
 |-----------|------------|
 | Standard use / interpretable | `Apriori` |
 | Large datasets / many items | `FPGrowth` |
-| Data has missing values | `FilteredAssociator` or preprocess with `run_data.sh` |
+| Data has missing values | `FilteredAssociator` or preprocess with `process_data.sh` |
 | Rank by lift or leverage | Both support `-T 1` (lift) or `-T 2` (leverage) |
 | Find ALL rules above threshold | `FPGrowth -S` |
 

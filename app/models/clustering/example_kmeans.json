@@ -1,9 +1,14 @@
 {
   "task": "clustering",
-  "algorithm": "weka.clusterers.SimpleKMeans",
-  "options": ["-N", "3", "-S", "10"],
   "evaluation": {
     "mode": "dataset",
     "dataset": "/absolute/path/to/data.arff"
-  }
+  },
+  "models": [
+    {
+      "name": "KMeans3",
+      "algorithm": "weka.clusterers.SimpleKMeans",
+      "options": ["-N", "3", "-S", "10"]
+    }
+  ]
 }

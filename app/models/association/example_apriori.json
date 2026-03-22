@@ -1,0 +1,9 @@
+{
+  "task": "association",
+  "algorithm": "weka.associations.Apriori",
+  "options": ["-N", "10", "-C", "0.9"],
+  "evaluation": {
+    "mode": "dataset",
+    "dataset": "/absolute/path/to/data.arff"
+  }
+}

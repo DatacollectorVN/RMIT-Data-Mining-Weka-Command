@@ -1,0 +1,11 @@
+{
+  "task": "classification",
+  "algorithm": "weka.classifiers.lazy.IBk",
+  "options": ["-K", "3", "-W", "0", "-A", "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""],
+  "evaluation": {
+    "mode": "cross-validation",
+    "folds": 10,
+    "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff"
+  }
+}
+  

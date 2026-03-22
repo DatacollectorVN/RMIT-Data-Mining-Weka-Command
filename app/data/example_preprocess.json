@@ -1,0 +1,16 @@
+{
+  "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff",
+  "is_debug": true,
+  "steps": [
+    {
+      "name": "remove_attr",
+      "filter": "weka.filters.unsupervised.attribute.Remove",
+      "options": ["-R", "1,2"]
+    },
+    {
+      "name": "standardize_attr",
+      "filter": "weka.filters.unsupervised.attribute.Standardize",
+      "options": []
+    }
+  ]
+}

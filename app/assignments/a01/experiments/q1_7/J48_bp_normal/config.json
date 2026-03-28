@@ -1,0 +1,16 @@
+{
+  "task": "classification",
+  "save_model": false,
+  "evaluation": {
+    "mode": "cross-validation",
+    "folds": 10,
+    "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_7_preprocessing/data/ckd_bp_normal.arff"
+  },
+  "models": [
+    {
+      "name": "J48_bp_normal",
+      "algorithm": "weka.classifiers.trees.J48",
+      "options": []
+    }
+  ]
+}

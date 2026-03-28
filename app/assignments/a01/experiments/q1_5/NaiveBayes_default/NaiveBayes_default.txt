@@ -1,0 +1,225 @@
+==================================================================
+  Weka Run Report — NaiveBayes_default
+==================================================================
+  Date        : 2026-03-26 22:27:12
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_5.json
+  Task        : classification
+  Algorithm   : weka.classifiers.bayes.NaiveBayes
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_222712/NaiveBayes_default/NaiveBayes_default.txt
+==================================================================
+
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                   Class
+Attribute            ckd    notckd
+                  (0.62)    (0.38)
+===================================
+age
+  mean            54.5406   46.5632
+  std. dev.       17.3733   15.5679
+  weight sum          242       149
+  precision        1.1733    1.1733
+
+bp
+  mean            80.7685   74.1742
+  std. dev.       15.4895   12.2988
+  weight sum          240       148
+  precision       14.4444   14.4444
+
+sg
+  1.005               8.0       1.0
+  1.010              85.0       1.0
+  1.015              76.0       1.0
+  1.020              32.0      76.0
+  1.025              12.0      71.0
+  [total]           213.0     150.0
+
+al
+  0                  55.0     146.0
+  1                  45.0       1.0
+  2                  44.0       1.0
+  3                  44.0       1.0
+  4                  25.0       1.0
+  5                   2.0       1.0
+  [total]           215.0     151.0
+
+su
+  0                 146.0     146.0
+  1                  14.0       1.0
+  2                  19.0       1.0
+  3                  15.0       1.0
+  4                  14.0       1.0
+  5                   4.0       1.0
+  [total]           212.0     151.0
+
+rbc
+  normal             61.0     142.0
+  abnormal           48.0       1.0
+  [total]           109.0     143.0
+
+pc
+  normal            119.0     142.0
+  abnormal           77.0       1.0
+  [total]           196.0     143.0
+
+pcc
+  present            43.0       1.0
+  notpresent        209.0     147.0
+  [total]           252.0     148.0
+
+ba
+  present            23.0       1.0
+  notpresent        229.0     147.0
+  [total]           252.0     148.0
+
+bgr
+  mean           175.3249  107.7207
+  std. dev.       91.7988   18.4702
+  weight sum          212       144
+  precision        3.2276    3.2276
+
+bu
+  mean            72.5791   33.0132
+  std. dev.       58.4494   11.3132
+  weight sum          237       144
+  precision        3.3291    3.3291
+
+sc
+  mean             4.4356    0.9046
+  std. dev.        6.9249    0.1518
+  weight sum          238       145
+  precision        0.9108    0.9108
+
+sod
+  mean           133.8273  141.6728
+  std. dev.       12.4227    4.8565
+  weight sum          168       145
+  precision         4.803     4.803
+
+pot
+  mean             4.9536    4.1706
+  std. dev.        4.2998    0.5423
+  weight sum          167       145
+  precision         1.141     1.141
+
+hemo
+  mean            10.6514   15.1862
+  std. dev.        2.1794    1.2753
+  weight sum          204       144
+  precision        0.1289    0.1289
+
+pcv
+  mean            32.9508   46.2404
+  std. dev.        7.1618    4.2084
+  weight sum          183       146
+  precision        1.0976    1.0976
+
+wbcc
+  mean          9062.2517 7692.3077
+  std. dev.     3573.2958 1829.9166
+  weight sum          151       143
+  precision           275       275
+
+rbcc
+  mean             3.9472     5.389
+  std. dev.         0.865     0.577
+  weight sum          126       143
+  precision        0.1341    0.1341
+
+htn
+  yes               148.0       1.0
+  no                104.0     149.0
+  [total]           252.0     150.0
+
+dm
+  yes               138.0       1.0
+  no                114.0     149.0
+  [total]           252.0     150.0
+
+cad
+  yes                35.0       1.0
+  no                217.0     149.0
+  [total]           252.0     150.0
+
+appet
+  good              169.0     150.0
+  poor               83.0       1.0
+  [total]           252.0     151.0
+
+pe
+  yes                77.0       1.0
+  no                175.0     150.0
+  [total]           252.0     151.0
+
+ane
+  yes                61.0       1.0
+  no                191.0     150.0
+  [total]           252.0     151.0
+
+
+
+Time taken to build model: 0.09 seconds
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         379               94.75   %
+Incorrectly Classified Instances        21                5.25   %
+Kappa statistic                          0.8911
+Mean absolute error                      0.0498
+Root mean squared error                  0.2108
+Relative absolute error                 10.6129 %
+Root relative squared error             43.5459 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.916    0.000    1.000      0.916    0.956      0.896    1.000     1.000     ckd
+                 1.000    0.084    0.877      1.000    0.935      0.896    1.000     1.000     notckd
+Weighted Avg.    0.948    0.032    0.954      0.948    0.948      0.896    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 229  21 |   a = ckd
+   0 150 |   b = notckd
+
+Time taken to perform cross-validation: 0.01 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         380               95      %
+Incorrectly Classified Instances        20                5      %
+Kappa statistic                          0.8961
+Mean absolute error                      0.0479
+Root mean squared error                  0.2046
+Relative absolute error                 10.2125 %
+Root relative squared error             42.2526 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.920    0.000    1.000      0.920    0.958      0.901    1.000     1.000     ckd
+                 1.000    0.080    0.882      1.000    0.938      0.901    1.000     1.000     notckd
+Weighted Avg.    0.950    0.030    0.956      0.950    0.951      0.901    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 230  20 |   a = ckd
+   0 150 |   b = notckd
+

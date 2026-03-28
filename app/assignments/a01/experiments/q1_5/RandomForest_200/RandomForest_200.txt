@@ -1,0 +1,84 @@
+==================================================================
+  Weka Run Report — RandomForest_200
+==================================================================
+  Date        : 2026-03-26 22:27:14
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_5.json
+  Task        : classification
+  Algorithm   : weka.classifiers.trees.RandomForest
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff
+  Folds       : 10
+  Options     : -I 200 -S 42
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_222712/RandomForest_200/RandomForest_200.txt
+==================================================================
+
+
+Options: -I 200 -S 42 
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 200 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 42 -do-not-check-capabilities
+
+Time taken to build model: 0.21 seconds
+
+Time taken to test model on training data: 0.03 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         400              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0179
+Root mean squared error                  0.0365
+Relative absolute error                  3.8085 %
+Root relative squared error              7.5361 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     ckd
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     notckd
+Weighted Avg.    1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 250   0 |   a = ckd
+   0 150 |   b = notckd
+
+Time taken to perform cross-validation: 0.58 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         399               99.75   %
+Incorrectly Classified Instances         1                0.25   %
+Kappa statistic                          0.9947
+Mean absolute error                      0.042 
+Root mean squared error                  0.0853
+Relative absolute error                  8.9528 %
+Root relative squared error             17.6161 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.996    0.000    1.000      0.996    0.998      0.995    1.000     1.000     ckd
+                 1.000    0.004    0.993      1.000    0.997      0.995    1.000     1.000     notckd
+Weighted Avg.    0.998    0.002    0.998      0.998    0.998      0.995    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 249   1 |   a = ckd
+   0 150 |   b = notckd
+

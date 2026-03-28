@@ -1,0 +1,51 @@
+{
+    "task": "classification",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff"
+    },
+    "models": [
+        {
+            "name": "IBk_K1",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "1"]
+        },
+        {
+            "name": "IBk_K3",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "3"]
+        },
+        {
+            "name": "IBk_K5",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "5"]
+        },
+        {
+            "name": "IBk_K10",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "10"]
+        },
+        {
+            "name": "IBk_K15",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "15"]
+        },
+        {
+            "name": "IBk_K20",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "20"]
+        },
+        {
+            "name": "IBk_K30",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "30"]
+        },
+        {
+            "name": "IBk_K50",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "50"]
+        }
+    ]
+}

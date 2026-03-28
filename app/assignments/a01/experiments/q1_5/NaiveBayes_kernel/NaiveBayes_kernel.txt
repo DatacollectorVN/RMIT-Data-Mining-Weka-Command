@@ -1,0 +1,642 @@
+==================================================================
+  Weka Run Report — NaiveBayes_kernel
+==================================================================
+  Date        : 2026-03-26 22:27:13
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_5.json
+  Task        : classification
+  Algorithm   : weka.classifiers.bayes.NaiveBayes
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff
+  Folds       : 10
+  Options     : -K
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_222712/NaiveBayes_kernel/NaiveBayes_kernel.txt
+==================================================================
+
+
+Options: -K 
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                             Class
+Attribute                      ckd        notckd
+                            (0.62)        (0.38)
+=================================================
+age
+  [# kernels]                    62            51
+  [std. dev]                 5.6569        5.5751
+  [precision]                1.1733        1.1733
+  K1: mean (weight)      2.3467 (1)   11.7333 (1)
+  K2: mean (weight)        3.52 (2)   15.2533 (1)
+  K3: mean (weight)      4.6933 (2)   16.4267 (1)
+  K4: mean (weight)      5.8667 (1)   18.7733 (1)
+  K5: mean (weight)        7.04 (1)   19.9467 (2)
+  K6: mean (weight)      8.2133 (3)   22.2933 (1)
+  K7: mean (weight)       10.56 (1)   23.4667 (7)
+  K8: mean (weight)     11.7333 (1)     24.64 (3)
+  K9: mean (weight)       14.08 (1)     28.16 (2)
+  K10: mean (weight)    15.2533 (1)   29.3333 (3)
+  K11: mean (weight)    16.4267 (2)   30.5067 (6)
+  K12: mean (weight)    18.7733 (1)     31.68 (2)
+  K13: mean (weight)      21.12 (2)   32.8533 (5)
+  K14: mean (weight)    23.4667 (1)   34.0267 (4)
+  K15: mean (weight)    25.8133 (1)      35.2 (4)
+  K16: mean (weight)    26.9867 (1)   36.3733 (1)
+  K17: mean (weight)    30.5067 (1)   37.5467 (4)
+  K18: mean (weight)      31.68 (1)     38.72 (3)
+  K19: mean (weight)    32.8533 (1)   39.8933 (2)
+  K20: mean (weight)    34.0267 (5)   41.0667 (3)
+  K21: mean (weight)       35.2 (2)     42.24 (4)
+  K22: mean (weight)    36.3733 (1)   43.4133 (5)
+  K23: mean (weight)    37.5467 (2)   44.5867 (8)
+  K24: mean (weight)      38.72 (1)     45.76 (3)
+  K25: mean (weight)    39.8933 (2)   46.9333 (6)
+  K26: mean (weight)    41.0667 (2)   48.1067 (3)
+  K27: mean (weight)      42.24 (2)     49.28 (1)
+  K28: mean (weight)    43.4133 (1)   50.4533 (6)
+  K29: mean (weight)    44.5867 (8)   51.6267 (3)
+  K30: mean (weight)      45.76 (6)      52.8 (1)
+  K31: mean (weight)    46.9333 (5)   53.9733 (1)
+  K32: mean (weight)    48.1067 (9)   55.1467 (6)
+  K33: mean (weight)      49.28 (1)     56.32 (3)
+  K34: mean (weight)   50.4533 (11)   57.4933 (8)
+  K35: mean (weight)    51.6267 (2)   58.6667 (2)
+  K36: mean (weight)       52.8 (4)     59.84 (4)
+  K37: mean (weight)    53.9733 (9)   61.0133 (2)
+  K38: mean (weight)    55.1467 (6)   62.1867 (2)
+  K39: mean (weight)      56.32 (7)     63.36 (2)
+  K40: mean (weight)    57.4933 (5)   64.5333 (4)
+  K41: mean (weight)    58.6667 (8)   65.7067 (2)
+  K42: mean (weight)     59.84 (15)     66.88 (1)
+  K43: mean (weight)    61.0133 (7)   68.0533 (1)
+  K44: mean (weight)    62.1867 (8)   69.2267 (1)
+  K45: mean (weight)      63.36 (5)      70.4 (2)
+  K46: mean (weight)   64.5333 (21)   71.5733 (4)
+  K47: mean (weight)    65.7067 (3)   72.7467 (2)
+  K48: mean (weight)      66.88 (6)     73.92 (1)
+  K49: mean (weight)    68.0533 (7)   75.0933 (2)
+  K50: mean (weight)    69.2267 (5)   78.6133 (1)
+  K51: mean (weight)       70.4 (7)   79.7867 (2)
+  K52: mean (weight)   71.5733 (11)            --
+  K53: mean (weight)    72.7467 (6)            --
+  K54: mean (weight)      73.92 (2)            --
+  K55: mean (weight)    75.0933 (3)            --
+  K56: mean (weight)    76.2667 (5)            --
+  K57: mean (weight)      77.44 (1)            --
+  K58: mean (weight)    79.7867 (2)            --
+  K59: mean (weight)      80.96 (1)            --
+  K60: mean (weight)    82.1333 (1)            --
+  K61: mean (weight)    83.3067 (1)            --
+  K62: mean (weight)    90.3467 (1)            --
+
+bp
+  [# kernels]                     8             3
+  [std. dev]                 8.3915        2.4074
+  [precision]               14.4444       14.4444
+  K1: mean (weight)     43.3333 (5)  57.7778 (45)
+  K2: mean (weight)    57.7778 (26)  72.2222 (38)
+  K3: mean (weight)    72.2222 (74)  86.6667 (65)
+  K4: mean (weight)   86.6667 (104)            --
+  K5: mean (weight)   101.1111 (25)            --
+  K6: mean (weight)    115.5556 (4)            --
+  K7: mean (weight)    144.4444 (1)            --
+  K8: mean (weight)    173.3333 (1)            --
+
+sg
+  1.005                         8.0           1.0
+  1.010                        85.0           1.0
+  1.015                        76.0           1.0
+  1.020                        32.0          76.0
+  1.025                        12.0          71.0
+  [total]                     213.0         150.0
+
+al
+  0                            55.0         146.0
+  1                            45.0           1.0
+  2                            44.0           1.0
+  3                            44.0           1.0
+  4                            25.0           1.0
+  5                             2.0           1.0
+  [total]                     215.0         151.0
+
+su
+  0                           146.0         146.0
+  1                            14.0           1.0
+  2                            19.0           1.0
+  3                            15.0           1.0
+  4                            14.0           1.0
+  5                             4.0           1.0
+  [total]                     212.0         151.0
+
+rbc
+  normal                       61.0         142.0
+  abnormal                     48.0           1.0
+  [total]                     109.0         143.0
+
+pc
+  normal                      119.0         142.0
+  abnormal                     77.0           1.0
+  [total]                     196.0         143.0
+
+pcc
+  present                      43.0           1.0
+  notpresent                  209.0         147.0
+  [total]                     252.0         148.0
+
+ba
+  present                      23.0           1.0
+  notpresent                  229.0         147.0
+  [total]                     252.0         148.0
+
+bgr
+  [# kernels]                    79            22
+  [std. dev]                32.1424        5.6483
+  [precision]                3.2276        3.2276
+  K1: mean (weight)     22.5931 (1)   71.0069 (3)
+  K2: mean (weight)     71.0069 (2)   74.2345 (3)
+  K3: mean (weight)     74.2345 (2)   77.4621 (4)
+  K4: mean (weight)     77.4621 (6)   80.6897 (7)
+  K5: mean (weight)     80.6897 (1)   83.9172 (4)
+  K6: mean (weight)     83.9172 (1)   87.1448 (5)
+  K7: mean (weight)     87.1448 (2)   90.3724 (4)
+  K8: mean (weight)     90.3724 (4)     93.6 (11)
+  K9: mean (weight)       93.6 (13)   96.8276 (6)
+  K10: mean (weight)    96.8276 (1) 100.0552 (12)
+  K11: mean (weight)   100.0552 (9)  103.2828 (5)
+  K12: mean (weight)   103.2828 (8)  106.5103 (9)
+  K13: mean (weight)   106.5103 (9)  109.7379 (8)
+  K14: mean (weight)   109.7379 (4)  112.9655 (7)
+  K15: mean (weight)   112.9655 (5)  116.1931 (4)
+  K16: mean (weight)   116.1931 (4) 119.4207 (11)
+  K17: mean (weight)   119.4207 (5)  122.6483 (7)
+  K18: mean (weight)   122.6483 (8)  125.8759 (6)
+  K19: mean (weight)   125.8759 (2)  129.1034 (8)
+  K20: mean (weight)   129.1034 (5)  132.331 (12)
+  K21: mean (weight)    132.331 (3)  135.5586 (3)
+  K22: mean (weight)   135.5586 (1)  138.7862 (5)
+  K23: mean (weight)   138.7862 (7)            --
+  K24: mean (weight)   142.0138 (3)            --
+  K25: mean (weight)   145.2414 (3)            --
+  K26: mean (weight)    148.469 (4)            --
+  K27: mean (weight)   151.6966 (2)            --
+  K28: mean (weight)   154.9241 (1)            --
+  K29: mean (weight)   158.1517 (4)            --
+  K30: mean (weight)   161.3793 (2)            --
+  K31: mean (weight)   164.6069 (4)            --
+  K32: mean (weight)   167.8345 (2)            --
+  K33: mean (weight)   171.0621 (6)            --
+  K34: mean (weight)   174.2897 (1)            --
+  K35: mean (weight)   177.5172 (1)            --
+  K36: mean (weight)   180.7448 (1)            --
+  K37: mean (weight)   183.9724 (1)            --
+  K38: mean (weight)   190.4276 (2)            --
+  K39: mean (weight)   200.1103 (1)            --
+  K40: mean (weight)   203.3379 (3)            --
+  K41: mean (weight)   206.5655 (4)            --
+  K42: mean (weight)   209.7931 (2)            --
+  K43: mean (weight)   213.0207 (5)            --
+  K44: mean (weight)   216.2483 (1)            --
+  K45: mean (weight)   219.4759 (4)            --
+  K46: mean (weight)   222.7034 (1)            --
+  K47: mean (weight)    225.931 (1)            --
+  K48: mean (weight)   229.1586 (1)            --
+  K49: mean (weight)   232.3862 (2)            --
+  K50: mean (weight)   238.8414 (2)            --
+  K51: mean (weight)    242.069 (2)            --
+  K52: mean (weight)   245.2966 (1)            --
+  K53: mean (weight)   248.5241 (2)            --
+  K54: mean (weight)   251.7517 (4)            --
+  K55: mean (weight)   254.9793 (2)            --
+  K56: mean (weight)   261.4345 (2)            --
+  K57: mean (weight)   264.6621 (1)            --
+  K58: mean (weight)   267.8897 (2)            --
+  K59: mean (weight)   271.1172 (1)            --
+  K60: mean (weight)   274.3448 (1)            --
+  K61: mean (weight)      280.8 (1)            --
+  K62: mean (weight)   287.2552 (1)            --
+  K63: mean (weight)   293.7103 (2)            --
+  K64: mean (weight)   296.9379 (2)            --
+  K65: mean (weight)   303.3931 (2)            --
+  K66: mean (weight)   306.6207 (2)            --
+  K67: mean (weight)   309.8483 (1)            --
+  K68: mean (weight)   322.7586 (1)            --
+  K69: mean (weight)   342.1241 (1)            --
+  K70: mean (weight)   351.8069 (1)            --
+  K71: mean (weight)   361.4897 (2)            --
+  K72: mean (weight)   380.8552 (1)            --
+  K73: mean (weight)   409.9034 (1)            --
+  K74: mean (weight)   416.3586 (1)            --
+  K75: mean (weight)   422.8138 (3)            --
+  K76: mean (weight)   426.0414 (1)            --
+  K77: mean (weight)   445.4069 (1)            --
+  K78: mean (weight)   461.5448 (1)            --
+  K79: mean (weight)   490.5931 (2)            --
+
+bu
+  [# kernels]                    57            12
+  [std. dev]                25.3007        3.3291
+  [precision]                3.3291        3.3291
+  K1: mean (weight)           0 (1)    9.9872 (2)
+  K2: mean (weight)    16.6453 (12)  16.6453 (20)
+  K3: mean (weight)    19.9744 (12)   19.9744 (7)
+  K4: mean (weight)     23.3034 (9)   23.3034 (9)
+  K5: mean (weight)    26.6325 (15)  26.6325 (21)
+  K6: mean (weight)    29.9615 (10)   29.9615 (9)
+  K7: mean (weight)     33.2906 (8)   33.2906 (9)
+  K8: mean (weight)    36.6197 (11)  36.6197 (14)
+  K9: mean (weight)    39.9487 (10)  39.9487 (10)
+  K10: mean (weight)    43.2778 (2)  43.2778 (10)
+  K11: mean (weight)   46.6068 (13)  46.6068 (21)
+  K12: mean (weight)   49.9359 (10)  49.9359 (12)
+  K13: mean (weight)    53.265 (10)            --
+  K14: mean (weight)    56.594 (10)            --
+  K15: mean (weight)    59.9231 (4)            --
+  K16: mean (weight)    63.2521 (1)            --
+  K17: mean (weight)   66.5812 (11)            --
+  K18: mean (weight)    69.9103 (2)            --
+  K19: mean (weight)    73.2393 (5)            --
+  K20: mean (weight)    76.5684 (4)            --
+  K21: mean (weight)    79.8974 (4)            --
+  K22: mean (weight)    83.2265 (2)            --
+  K23: mean (weight)    86.5556 (6)            --
+  K24: mean (weight)    89.8846 (4)            --
+  K25: mean (weight)    93.2137 (3)            --
+  K26: mean (weight)    96.5427 (6)            --
+  K27: mean (weight)    99.8718 (1)            --
+  K28: mean (weight)   103.2009 (1)            --
+  K29: mean (weight)   106.5299 (6)            --
+  K30: mean (weight)    109.859 (2)            --
+  K31: mean (weight)    113.188 (2)            --
+  K32: mean (weight)   116.5171 (2)            --
+  K33: mean (weight)   126.5043 (3)            --
+  K34: mean (weight)   133.1624 (3)            --
+  K35: mean (weight)   136.4915 (1)            --
+  K36: mean (weight)   139.8205 (1)            --
+  K37: mean (weight)   143.1496 (1)            --
+  K38: mean (weight)   146.4786 (3)            --
+  K39: mean (weight)   149.8077 (1)            --
+  K40: mean (weight)   153.1368 (2)            --
+  K41: mean (weight)   156.4658 (3)            --
+  K42: mean (weight)   163.1239 (3)            --
+  K43: mean (weight)    166.453 (2)            --
+  K44: mean (weight)   176.4402 (1)            --
+  K45: mean (weight)   179.7692 (1)            --
+  K46: mean (weight)   186.4274 (1)            --
+  K47: mean (weight)   189.7564 (1)            --
+  K48: mean (weight)   203.0726 (1)            --
+  K49: mean (weight)   206.4017 (1)            --
+  K50: mean (weight)   216.3889 (2)            --
+  K51: mean (weight)   219.7179 (1)            --
+  K52: mean (weight)    223.047 (1)            --
+  K53: mean (weight)   236.3632 (1)            --
+  K54: mean (weight)   239.6923 (1)            --
+  K55: mean (weight)   309.6026 (1)            --
+  K56: mean (weight)   322.9188 (1)            --
+  K57: mean (weight)      389.5 (1)            --
+
+sc
+  [# kernels]                    24             2
+  [std. dev]                 4.8414        0.1518
+  [precision]                0.9108        0.9108
+  K1: mean (weight)     0.9108 (53)         0 (1)
+  K2: mean (weight)     1.8217 (66)  0.9108 (144)
+  K3: mean (weight)     2.7325 (31)            --
+  K4: mean (weight)     3.6434 (23)            --
+  K5: mean (weight)      4.5542 (7)            --
+  K6: mean (weight)      5.4651 (8)            --
+  K7: mean (weight)     6.3759 (12)            --
+  K8: mean (weight)      7.2867 (9)            --
+  K9: mean (weight)      8.1976 (1)            --
+  K10: mean (weight)     9.1084 (2)            --
+  K11: mean (weight)    10.0193 (3)            --
+  K12: mean (weight)    10.9301 (1)            --
+  K13: mean (weight)     11.841 (5)            --
+  K14: mean (weight)    12.7518 (2)            --
+  K15: mean (weight)    13.6627 (4)            --
+  K16: mean (weight)    14.5735 (2)            --
+  K17: mean (weight)    15.4843 (1)            --
+  K18: mean (weight)    16.3952 (1)            --
+  K19: mean (weight)     17.306 (1)            --
+  K20: mean (weight)    18.2169 (2)            --
+  K21: mean (weight)    23.6819 (1)            --
+  K22: mean (weight)    31.8795 (1)            --
+  K23: mean (weight)    48.2747 (1)            --
+  K24: mean (weight)       75.6 (1)            --
+
+sod
+  [# kernels]                    12             4
+  [std. dev]                12.2285        1.1966
+  [precision]                 4.803         4.803
+  K1: mean (weight)       4.803 (1) 134.4848 (27)
+  K2: mean (weight)    105.6667 (1) 139.2879 (48)
+  K3: mean (weight)    110.4697 (1) 144.0909 (41)
+  K4: mean (weight)    115.2727 (5) 148.8939 (29)
+  K5: mean (weight)    120.0758 (4)            --
+  K6: mean (weight)    124.8788 (9)            --
+  K7: mean (weight)   129.6818 (29)            --
+  K8: mean (weight)   134.4848 (44)            --
+  K9: mean (weight)   139.2879 (59)            --
+  K10: mean (weight)  144.0909 (13)            --
+  K11: mean (weight)   148.8939 (1)            --
+  K12: mean (weight)    163.303 (1)            --
+
+pot
+  [# kernels]                     8             2
+  [std. dev]                 3.4435        0.1902
+  [precision]                 1.141         1.141
+  K1: mean (weight)      2.2821 (4)   3.4231 (50)
+  K2: mean (weight)     3.4231 (44)   4.5641 (95)
+  K3: mean (weight)     4.5641 (84)            --
+  K4: mean (weight)     5.7051 (25)            --
+  K5: mean (weight)      6.8462 (7)            --
+  K6: mean (weight)      7.9872 (1)            --
+  K7: mean (weight)     38.7949 (1)            --
+  K8: mean (weight)     46.7821 (1)            --
+
+hemo
+  [# kernels]                    67            38
+  [std. dev]                 0.9118        0.3976
+  [precision]                0.1289        0.1289
+  K1: mean (weight)      3.0947 (1)   13.0237 (3)
+  K2: mean (weight)      4.7711 (1)   13.1526 (3)
+  K3: mean (weight)      5.5447 (2)   13.2816 (2)
+  K4: mean (weight)      5.8026 (1)   13.4105 (3)
+  K5: mean (weight)      6.0605 (3)   13.5395 (9)
+  K6: mean (weight)      6.1895 (1)   13.6684 (3)
+  K7: mean (weight)      6.3184 (1)   13.7974 (3)
+  K8: mean (weight)      6.5763 (1)   13.9263 (5)
+  K9: mean (weight)      6.8342 (1)   14.0553 (7)
+  K10: mean (weight)     7.0921 (1)   14.1842 (3)
+  K11: mean (weight)       7.35 (1)   14.3132 (3)
+  K12: mean (weight)     7.4789 (1)   14.4421 (6)
+  K13: mean (weight)     7.6079 (1)   14.5711 (2)
+  K14: mean (weight)     7.7368 (1)      14.7 (2)
+  K15: mean (weight)     7.8658 (5)   14.8289 (5)
+  K16: mean (weight)     7.9947 (2)  14.9579 (15)
+  K17: mean (weight)     8.1237 (3)   15.0868 (2)
+  K18: mean (weight)     8.2526 (4)   15.2158 (3)
+  K19: mean (weight)     8.3816 (1)   15.3447 (7)
+  K20: mean (weight)     8.5105 (1)   15.4737 (4)
+  K21: mean (weight)     8.6395 (5)   15.6026 (2)
+  K22: mean (weight)     8.7684 (2)   15.7316 (3)
+  K23: mean (weight)     9.0263 (1)   15.8605 (7)
+  K24: mean (weight)     9.1553 (5)   15.9895 (2)
+  K25: mean (weight)     9.2842 (2)   16.1184 (3)
+  K26: mean (weight)     9.4132 (3)   16.2474 (6)
+  K27: mean (weight)     9.5421 (6)   16.3763 (3)
+  K28: mean (weight)     9.6711 (5)   16.5053 (3)
+  K29: mean (weight)        9.8 (7)   16.6342 (2)
+  K30: mean (weight)     9.9289 (3)   16.7632 (4)
+  K31: mean (weight)    10.0579 (8)   16.8921 (2)
+  K32: mean (weight)    10.1868 (2)   17.0211 (4)
+  K33: mean (weight)    10.3158 (6)     17.15 (4)
+  K34: mean (weight)    10.4447 (5)   17.2789 (1)
+  K35: mean (weight)    10.5737 (1)   17.4079 (2)
+  K36: mean (weight)    10.7026 (1)   17.5368 (2)
+  K37: mean (weight)    10.8316 (5)   17.6658 (1)
+  K38: mean (weight)   10.9605 (11)   17.7947 (3)
+  K39: mean (weight)    11.0895 (7)            --
+  K40: mean (weight)    11.2184 (5)            --
+  K41: mean (weight)    11.3474 (9)            --
+  K42: mean (weight)    11.4763 (3)            --
+  K43: mean (weight)    11.6053 (3)            --
+  K44: mean (weight)    11.7342 (2)            --
+  K45: mean (weight)    11.8632 (7)            --
+  K46: mean (weight)    11.9921 (6)            --
+  K47: mean (weight)    12.1211 (2)            --
+  K48: mean (weight)      12.25 (6)            --
+  K49: mean (weight)    12.3789 (4)            --
+  K50: mean (weight)    12.5079 (4)            --
+  K51: mean (weight)    12.6368 (8)            --
+  K52: mean (weight)    12.7658 (1)            --
+  K53: mean (weight)    12.8947 (1)            --
+  K54: mean (weight)    13.0237 (4)            --
+  K55: mean (weight)    13.1526 (3)            --
+  K56: mean (weight)    13.4105 (1)            --
+  K57: mean (weight)    13.5395 (2)            --
+  K58: mean (weight)    13.6684 (1)            --
+  K59: mean (weight)    13.7974 (1)            --
+  K60: mean (weight)    13.9263 (1)            --
+  K61: mean (weight)    14.0553 (2)            --
+  K62: mean (weight)    14.3132 (2)            --
+  K63: mean (weight)    14.9579 (4)            --
+  K64: mean (weight)    15.2158 (1)            --
+  K65: mean (weight)    15.3447 (1)            --
+  K66: mean (weight)    15.6026 (1)            --
+  K67: mean (weight)    16.1184 (1)            --
+
+pcv
+  [# kernels]                    34            14
+  [std. dev]                 3.1642        1.1809
+  [precision]                1.0976        1.0976
+  K1: mean (weight)      8.7805 (1)   39.5122 (8)
+  K2: mean (weight)     14.2683 (1)  40.6098 (15)
+  K3: mean (weight)     15.3659 (1)   41.7073 (9)
+  K4: mean (weight)     16.4634 (2)  42.8049 (13)
+  K5: mean (weight)      17.561 (1)  43.9024 (14)
+  K6: mean (weight)     18.6585 (2)       45 (12)
+  K7: mean (weight)     19.7561 (1)   46.0976 (8)
+  K8: mean (weight)     20.8537 (1)   47.1951 (3)
+  K9: mean (weight)     21.9512 (3)  48.2927 (18)
+  K10: mean (weight)    23.0488 (2)   49.3902 (4)
+  K11: mean (weight)    24.1463 (7)  50.4878 (16)
+  K12: mean (weight)    25.2439 (3)  51.5854 (18)
+  K13: mean (weight)    26.3415 (6)   52.6829 (4)
+  K14: mean (weight)     27.439 (3)   53.7805 (4)
+  K15: mean (weight)   28.5366 (21)            --
+  K16: mean (weight)    29.6341 (9)            --
+  K17: mean (weight)    30.7317 (8)            --
+  K18: mean (weight)   31.8293 (12)            --
+  K19: mean (weight)   32.9268 (12)            --
+  K20: mean (weight)   34.0244 (11)            --
+  K21: mean (weight)     35.122 (9)            --
+  K22: mean (weight)   36.2195 (12)            --
+  K23: mean (weight)   37.3171 (11)            --
+  K24: mean (weight)    38.4146 (5)            --
+  K25: mean (weight)   39.5122 (15)            --
+  K26: mean (weight)    40.6098 (6)            --
+  K27: mean (weight)    41.7073 (4)            --
+  K28: mean (weight)    42.8049 (2)            --
+  K29: mean (weight)    43.9024 (5)            --
+  K30: mean (weight)         45 (1)            --
+  K31: mean (weight)    46.0976 (1)            --
+  K32: mean (weight)    47.1951 (1)            --
+  K33: mean (weight)    48.2927 (1)            --
+  K34: mean (weight)    51.5854 (3)            --
+
+wbcc
+  [# kernels]                    47            24
+  [std. dev]              1969.3681      551.9197
+  [precision]                   275           275
+  K1: mean (weight)        2200 (1)      4400 (6)
+  K2: mean (weight)        2475 (1)      4675 (3)
+  K3: mean (weight)        3850 (2)      4950 (2)
+  K4: mean (weight)        4125 (4)      5225 (3)
+  K5: mean (weight)        4400 (3)      5500 (7)
+  K6: mean (weight)        4675 (1)      5775 (7)
+  K7: mean (weight)        4950 (4)      6050 (2)
+  K8: mean (weight)        5225 (1)      6325 (9)
+  K9: mean (weight)        5500 (5)     6600 (11)
+  K10: mean (weight)       5775 (4)      6875 (9)
+  K11: mean (weight)       6050 (2)      7150 (7)
+  K12: mean (weight)       6325 (5)      7425 (6)
+  K13: mean (weight)       6600 (5)      7700 (7)
+  K14: mean (weight)      6875 (10)      7975 (8)
+  K15: mean (weight)       7150 (4)      8250 (4)
+  K16: mean (weight)       7425 (5)      8525 (6)
+  K17: mean (weight)       7700 (4)     9075 (10)
+  K18: mean (weight)       7975 (5)      9350 (7)
+  K19: mean (weight)       8250 (3)      9625 (7)
+  K20: mean (weight)       8525 (5)      9900 (3)
+  K21: mean (weight)       8800 (2)     10175 (3)
+  K22: mean (weight)       9075 (8)     10450 (6)
+  K23: mean (weight)       9350 (2)     10725 (5)
+  K24: mean (weight)       9625 (8)     11000 (5)
+  K25: mean (weight)       9900 (9)            --
+  K26: mean (weight)      10175 (6)            --
+  K27: mean (weight)      10450 (4)            --
+  K28: mean (weight)      10725 (2)            --
+  K29: mean (weight)      11000 (4)            --
+  K30: mean (weight)      11275 (4)            --
+  K31: mean (weight)      11550 (1)            --
+  K32: mean (weight)      11825 (2)            --
+  K33: mean (weight)      12100 (3)            --
+  K34: mean (weight)      12375 (4)            --
+  K35: mean (weight)      12650 (1)            --
+  K36: mean (weight)      12925 (2)            --
+  K37: mean (weight)      13200 (2)            --
+  K38: mean (weight)      13475 (1)            --
+  K39: mean (weight)      14575 (2)            --
+  K40: mean (weight)      14850 (1)            --
+  K41: mean (weight)      15125 (2)            --
+  K42: mean (weight)      15675 (1)            --
+  K43: mean (weight)      16225 (1)            --
+  K44: mean (weight)      16775 (1)            --
+  K45: mean (weight)      18975 (2)            --
+  K46: mean (weight)      21725 (1)            --
+  K47: mean (weight)      26400 (1)            --
+
+rbcc
+  [# kernels]                    27            16
+  [std. dev]                 0.5256        0.1682
+  [precision]                0.1341        0.1341
+  K1: mean (weight)      2.1455 (2)     4.425 (1)
+  K2: mean (weight)      2.2795 (1)   4.5591 (16)
+  K3: mean (weight)      2.4136 (1)    4.6932 (7)
+  K4: mean (weight)      2.5477 (4)    4.8273 (8)
+  K5: mean (weight)      2.6818 (2)   4.9614 (18)
+  K6: mean (weight)      2.8159 (2)    5.0955 (5)
+  K7: mean (weight)        2.95 (5)   5.2295 (13)
+  K8: mean (weight)      3.0841 (2)   5.3636 (13)
+  K9: mean (weight)      3.2182 (5)    5.4977 (8)
+  K10: mean (weight)    3.3523 (12)    5.6318 (5)
+  K11: mean (weight)     3.4864 (3)   5.7659 (12)
+  K12: mean (weight)     3.6205 (4)       5.9 (8)
+  K13: mean (weight)    3.7545 (15)   6.0341 (10)
+  K14: mean (weight)    3.8886 (10)    6.1682 (5)
+  K15: mean (weight)     4.0227 (6)    6.3023 (4)
+  K16: mean (weight)    4.1568 (11)   6.4364 (10)
+  K17: mean (weight)     4.2909 (6)            --
+  K18: mean (weight)      4.425 (4)            --
+  K19: mean (weight)     4.5591 (9)            --
+  K20: mean (weight)     4.6932 (4)            --
+  K21: mean (weight)     4.8273 (2)            --
+  K22: mean (weight)     4.9614 (6)            --
+  K23: mean (weight)     5.2295 (5)            --
+  K24: mean (weight)     5.3636 (1)            --
+  K25: mean (weight)     5.6318 (1)            --
+  K26: mean (weight)     6.0341 (2)            --
+  K27: mean (weight)     8.0455 (1)            --
+
+htn
+  yes                         148.0           1.0
+  no                          104.0         149.0
+  [total]                     252.0         150.0
+
+dm
+  yes                         138.0           1.0
+  no                          114.0         149.0
+  [total]                     252.0         150.0
+
+cad
+  yes                          35.0           1.0
+  no                          217.0         149.0
+  [total]                     252.0         150.0
+
+appet
+  good                        169.0         150.0
+  poor                         83.0           1.0
+  [total]                     252.0         151.0
+
+pe
+  yes                          77.0           1.0
+  no                          175.0         150.0
+  [total]                     252.0         151.0
+
+ane
+  yes                          61.0           1.0
+  no                          191.0         150.0
+  [total]                     252.0         151.0
+
+
+
+Time taken to build model: 0.07 seconds
+
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         391               97.75   %
+Incorrectly Classified Instances         9                2.25   %
+Kappa statistic                          0.9526
+Mean absolute error                      0.022 
+Root mean squared error                  0.1362
+Relative absolute error                  4.6834 %
+Root relative squared error             28.1307 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.964    0.000    1.000      0.964    0.982      0.954    1.000     1.000     ckd
+                 1.000    0.036    0.943      1.000    0.971      0.954    1.000     1.000     notckd
+Weighted Avg.    0.978    0.013    0.979      0.978    0.978      0.954    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 241   9 |   a = ckd
+   0 150 |   b = notckd
+
+Time taken to perform cross-validation: 0.03 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         392               98      %
+Incorrectly Classified Instances         8                2      %
+Kappa statistic                          0.9578
+Mean absolute error                      0.0215
+Root mean squared error                  0.1317
+Relative absolute error                  4.5913 %
+Root relative squared error             27.2101 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.000    1.000      0.968    0.984      0.959    1.000     1.000     ckd
+                 1.000    0.032    0.949      1.000    0.974      0.959    1.000     1.000     notckd
+Weighted Avg.    0.980    0.012    0.981      0.980    0.980      0.959    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 242   8 |   a = ckd
+   0 150 |   b = notckd
+

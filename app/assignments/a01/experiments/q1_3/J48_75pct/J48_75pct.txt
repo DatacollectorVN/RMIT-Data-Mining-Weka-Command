@@ -1,0 +1,95 @@
+==================================================================
+  Weka Run Report — J48_75pct
+==================================================================
+  Date        : 2026-03-26 21:52:32
+  Config      : /private/tmp/train_75.json
+  Task        : classification
+  Algorithm   : weka.classifiers.trees.J48
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_datasets/20260326/chronic_kidney_disease_b04e73ae/chronic_kidney_disease_20260326_215218.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_215232/J48_75pct/J48_75pct.txt
+==================================================================
+
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+sc <= 1.2
+|   pe = yes: ckd (13.57/0.09)
+|   pe = no
+|   |   hemo <= 12.9: ckd (16.85/0.5)
+|   |   hemo > 12.9
+|   |   |   sg = 1.005: notckd (0.0)
+|   |   |   sg = 1.010: ckd (5.23/0.18)
+|   |   |   sg = 1.015: ckd (5.36/0.18)
+|   |   |   sg = 1.020: notckd (48.92/0.86)
+|   |   |   sg = 1.025: notckd (57.44)
+sc > 1.2: ckd (152.63/2.54)
+
+Number of Leaves  : 	8
+
+Size of the tree : 	12
+
+
+Time taken to build model: 0.08 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         295               98.3333 %
+Incorrectly Classified Instances         5                1.6667 %
+Kappa statistic                          0.9636
+Mean absolute error                      0.0285
+Root mean squared error                  0.0784
+Relative absolute error                  6.1572 %
+Root relative squared error             16.311  %
+Total Number of Instances              300     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.046    0.974      1.000    0.987      0.964    1.000     1.000     ckd
+                 0.954    0.000    1.000      0.954    0.977      0.964    1.000     1.000     notckd
+Weighted Avg.    0.983    0.029    0.984      0.983    0.983      0.964    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 191   0 |   a = ckd
+   5 104 |   b = notckd
+
+Time taken to perform cross-validation: 0.03 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         292               97.3333 %
+Incorrectly Classified Instances         8                2.6667 %
+Kappa statistic                          0.9424
+Mean absolute error                      0.0452
+Root mean squared error                  0.1324
+Relative absolute error                  9.7627 %
+Root relative squared error             27.5227 %
+Total Number of Instances              300     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.979    0.037    0.979      0.979    0.979      0.942    0.997     0.999     ckd
+                 0.963    0.021    0.963      0.963    0.963      0.942    0.997     0.995     notckd
+Weighted Avg.    0.973    0.031    0.973      0.973    0.973      0.942    0.997     0.997     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 187   4 |   a = ckd
+   4 105 |   b = notckd
+

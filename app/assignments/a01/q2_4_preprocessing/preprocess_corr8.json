@@ -1,0 +1,15 @@
+{
+    "task": "preprocess",
+    "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff",
+    "is_debug": false,
+    "steps": [
+        {
+            "name": "attr_select_corr_top8",
+            "filter": "weka.filters.supervised.attribute.AttributeSelection",
+            "options": [
+                "-E", "weka.attributeSelection.CorrelationAttributeEval",
+                "-S", "weka.attributeSelection.Ranker -N 8"
+            ]
+        }
+    ]
+}

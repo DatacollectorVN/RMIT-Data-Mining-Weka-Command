@@ -1,0 +1,16 @@
+{
+  "task": "classification",
+  "save_model": false,
+  "evaluation": {
+    "mode": "cross-validation",
+    "folds": 10,
+    "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_8_preprocessing/data/ckd_reduced_infogain_top5.arff"
+  },
+  "models": [
+    {
+      "name": "J48_infogain_top5",
+      "algorithm": "weka.classifiers.trees.J48",
+      "options": []
+    }
+  ]
+}

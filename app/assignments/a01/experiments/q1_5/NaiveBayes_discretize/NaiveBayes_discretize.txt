@@ -1,0 +1,221 @@
+==================================================================
+  Weka Run Report — NaiveBayes_discretize
+==================================================================
+  Date        : 2026-03-26 22:27:13
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_5.json
+  Task        : classification
+  Algorithm   : weka.classifiers.bayes.NaiveBayes
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff
+  Folds       : 10
+  Options     : -D
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_222712/NaiveBayes_discretize/NaiveBayes_discretize.txt
+==================================================================
+
+
+Options: -D 
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                     Class
+Attribute              ckd notckd
+                    (0.62) (0.38)
+==================================
+age
+  '(-inf-11.5]'        12.0    1.0
+  '(11.5-44.5]'        34.0   71.0
+  '(44.5-inf)'        199.0   80.0
+  [total]             245.0  152.0
+
+bp
+  '(-inf-85]'         157.0  149.0
+  '(85-inf)'           85.0    1.0
+  [total]             242.0  150.0
+
+sg
+  1.005                 8.0    1.0
+  1.010                85.0    1.0
+  1.015                76.0    1.0
+  1.020                32.0   76.0
+  1.025                12.0   71.0
+  [total]             213.0  150.0
+
+al
+  0                    55.0  146.0
+  1                    45.0    1.0
+  2                    44.0    1.0
+  3                    44.0    1.0
+  4                    25.0    1.0
+  5                     2.0    1.0
+  [total]             215.0  151.0
+
+su
+  0                   146.0  146.0
+  1                    14.0    1.0
+  2                    19.0    1.0
+  3                    15.0    1.0
+  4                    14.0    1.0
+  5                     4.0    1.0
+  [total]             212.0  151.0
+
+rbc
+  normal               61.0  142.0
+  abnormal             48.0    1.0
+  [total]             109.0  143.0
+
+pc
+  normal              119.0  142.0
+  abnormal             77.0    1.0
+  [total]             196.0  143.0
+
+pcc
+  present              43.0    1.0
+  notpresent          209.0  147.0
+  [total]             252.0  148.0
+
+ba
+  present              23.0    1.0
+  notpresent          229.0  147.0
+  [total]             252.0  148.0
+
+bgr
+  '(-inf-140.5]'      104.0  145.0
+  '(140.5-inf)'       110.0    1.0
+  [total]             214.0  146.0
+
+bu
+  '(-inf-50.05]'      109.0  145.0
+  '(50.05-inf)'       130.0    1.0
+  [total]             239.0  146.0
+
+sc
+  '(-inf-1.25]'        46.0  146.0
+  '(1.25-inf)'        194.0    1.0
+  [total]             240.0  147.0
+
+sod
+  '(-inf-134.5]'       65.0    1.0
+  '(134.5-142.5]'      98.0   88.0
+  '(142.5-inf)'         8.0   59.0
+  [total]             171.0  148.0
+
+pot
+  '(-inf-3.25]'        13.0    1.0
+  '(3.25-4.95]'       118.0  118.0
+  '(4.95-5.05]'         3.0   29.0
+  '(5.05-inf)'         37.0    1.0
+  [total]             171.0  149.0
+
+hemo
+  '(-inf-12.95]'      180.0    1.0
+  '(12.95-inf)'        26.0  145.0
+  [total]             206.0  146.0
+
+pcv
+  '(-inf-39.5]'       152.0    1.0
+  '(39.5-inf)'         33.0  147.0
+  [total]             185.0  148.0
+
+wbcc
+  '(-inf-11100]'      120.0  144.0
+  '(11100-inf)'        33.0    1.0
+  [total]             153.0  145.0
+
+rbcc
+  '(-inf-4.45]'        96.0    2.0
+  '(4.45-inf)'         32.0  143.0
+  [total]             128.0  145.0
+
+htn
+  yes                 148.0    1.0
+  no                  104.0  149.0
+  [total]             252.0  150.0
+
+dm
+  yes                 138.0    1.0
+  no                  114.0  149.0
+  [total]             252.0  150.0
+
+cad
+  yes                  35.0    1.0
+  no                  217.0  149.0
+  [total]             252.0  150.0
+
+appet
+  good                169.0  150.0
+  poor                 83.0    1.0
+  [total]             252.0  151.0
+
+pe
+  yes                  77.0    1.0
+  no                  175.0  150.0
+  [total]             252.0  151.0
+
+ane
+  yes                  61.0    1.0
+  no                  191.0  150.0
+  [total]             252.0  151.0
+
+
+
+Time taken to build model: 0.1 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         394               98.5    %
+Incorrectly Classified Instances         6                1.5    %
+Kappa statistic                          0.9683
+Mean absolute error                      0.0205
+Root mean squared error                  0.1171
+Relative absolute error                  4.377  %
+Root relative squared error             24.1937 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.976    0.000    1.000      0.976    0.988      0.969    1.000     1.000     ckd
+                 1.000    0.024    0.962      1.000    0.980      0.969    1.000     1.000     notckd
+Weighted Avg.    0.985    0.009    0.986      0.985    0.985      0.969    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 244   6 |   a = ckd
+   0 150 |   b = notckd
+
+Time taken to perform cross-validation: 0.03 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         392               98      %
+Incorrectly Classified Instances         8                2      %
+Kappa statistic                          0.9578
+Mean absolute error                      0.0254
+Root mean squared error                  0.1377
+Relative absolute error                  5.4212 %
+Root relative squared error             28.452  %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.968    0.000    1.000      0.968    0.984      0.959    1.000     1.000     ckd
+                 1.000    0.032    0.949      1.000    0.974      0.959    1.000     1.000     notckd
+Weighted Avg.    0.980    0.012    0.981      0.980    0.980      0.959    1.000     1.000     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 242   8 |   a = ckd
+   0 150 |   b = notckd
+

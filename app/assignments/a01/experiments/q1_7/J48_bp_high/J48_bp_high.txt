@@ -1,0 +1,84 @@
+==================================================================
+  Weka Run Report — J48_bp_high
+==================================================================
+  Date        : 2026-03-26 23:16:53
+  Config      : /private/tmp/q1_7_bp_high.json
+  Task        : classification
+  Algorithm   : weka.classifiers.trees.J48
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_7_preprocessing/data/ckd_bp_high.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_231653/J48_bp_high/J48_bp_high.txt
+==================================================================
+
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+: ckd (96.0/2.0)
+
+Number of Leaves  : 	1
+
+Size of the tree : 	1
+
+
+Time taken to build model: 0.07 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances          94               97.9167 %
+Incorrectly Classified Instances         2                2.0833 %
+Kappa statistic                          0     
+Mean absolute error                      0.0408
+Root mean squared error                  0.1428
+Relative absolute error                 81.3206 %
+Root relative squared error             99.7664 %
+Total Number of Instances               96     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.979      1.000    0.989      ?        0.500     0.979     ckd
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.021     notckd
+Weighted Avg.    0.979    0.979    ?          0.979    ?          ?        0.500     0.959     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 94  0 |  a = ckd
+  2  0 |  b = notckd
+
+Time taken to perform cross-validation: 0.01 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances          94               97.9167 %
+Incorrectly Classified Instances         2                2.0833 %
+Kappa statistic                          0     
+Mean absolute error                      0.0411
+Root mean squared error                  0.1442
+Relative absolute error                 79.8231 %
+Root relative squared error             99.7515 %
+Total Number of Instances               96     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.979      1.000    0.989      ?        0.096     0.958     ckd
+                 0.000    0.000    ?          0.000    ?          ?        0.096     0.021     notckd
+Weighted Avg.    0.979    0.979    ?          0.979    ?          ?        0.096     0.939     
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 94  0 |  a = ckd
+  2  0 |  b = notckd
+

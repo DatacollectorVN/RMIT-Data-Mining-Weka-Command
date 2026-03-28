@@ -1,0 +1,15 @@
+{
+  "task": "preprocess",
+  "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff",
+  "is_debug": false,
+  "steps": [
+    {
+      "name": "attr_select_infogain_top5",
+      "filter": "weka.filters.supervised.attribute.AttributeSelection",
+      "options": [
+        "-E", "weka.attributeSelection.InfoGainAttributeEval",
+        "-S", "weka.attributeSelection.Ranker -N 5"
+      ]
+    }
+  ]
+}

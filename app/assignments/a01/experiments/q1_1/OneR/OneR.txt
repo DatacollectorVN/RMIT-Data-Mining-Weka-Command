@@ -1,0 +1,82 @@
+==================================================================
+  Weka Run Report — OneR
+==================================================================
+  Date        : 2026-03-26 21:17:38
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_1.json
+  Task        : classification
+  Algorithm   : weka.classifiers.rules.OneR
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_211738/OneR/OneR.txt
+==================================================================
+
+
+=== Classifier model (full training set) ===
+
+hemo:
+	< 13.25	-> ckd
+	>= 13.25	-> notckd
+	?	-> ckd
+(370/400 instances correct)
+
+
+Time taken to build model: 0.08 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         370               92.5    %
+Incorrectly Classified Instances        30                7.5    %
+Kappa statistic                          0.8413
+Mean absolute error                      0.075 
+Root mean squared error                  0.2739
+Relative absolute error                 15.9947 %
+Root relative squared error             56.5685 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.928    0.080    0.951      0.928    0.939      0.842    0.924     0.927     ckd
+                 0.920    0.072    0.885      0.920    0.902      0.842    0.924     0.844     notckd
+Weighted Avg.    0.925    0.077    0.926      0.925    0.925      0.842    0.924     0.896     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 232  18 |   a = ckd
+  12 138 |   b = notckd
+
+Time taken to perform cross-validation: 0.02 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         368               92      %
+Incorrectly Classified Instances        32                8      %
+Kappa statistic                          0.8316
+Mean absolute error                      0.08  
+Root mean squared error                  0.2828
+Relative absolute error                 17.0604 %
+Root relative squared error             58.4237 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.916    0.073    0.954      0.916    0.935      0.833    0.921     0.927     ckd
+                 0.927    0.084    0.869      0.927    0.897      0.833    0.921     0.833     notckd
+Weighted Avg.    0.920    0.077    0.922      0.920    0.920      0.833    0.921     0.891     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 229  21 |   a = ckd
+  11 139 |   b = notckd
+

@@ -1,0 +1,12 @@
+{
+    "task": "preprocess",
+    "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff",
+    "is_debug": false,
+    "steps": [
+        {
+            "name": "normalize",
+            "filter": "weka.filters.unsupervised.attribute.Normalize",
+            "options": ["-c", "last"]
+        }
+    ]
+}

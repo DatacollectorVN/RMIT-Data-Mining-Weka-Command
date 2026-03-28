@@ -1,0 +1,17 @@
+{
+    "task": "preprocess",
+    "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff",
+    "is_debug": false,
+    "steps": [
+        {
+            "name": "remove_quality",
+            "filter": "weka.filters.unsupervised.attribute.Remove",
+            "options": ["-R", "12"]
+        },
+        {
+            "name": "pca_unsupervised",
+            "filter": "weka.filters.unsupervised.attribute.PrincipalComponents",
+            "options": ["-R", "0.95"]
+        }
+    ]
+}

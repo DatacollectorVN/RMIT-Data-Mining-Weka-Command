@@ -1,0 +1,16 @@
+{
+    "task": "regression",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-red.arff"
+    },
+    "models": [
+        {
+            "name": "RF_200_red",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-I", "200"]
+        }
+    ]
+}

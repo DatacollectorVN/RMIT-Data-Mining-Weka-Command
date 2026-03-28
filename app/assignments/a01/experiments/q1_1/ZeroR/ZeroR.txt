@@ -1,0 +1,77 @@
+==================================================================
+  Weka Run Report — ZeroR
+==================================================================
+  Date        : 2026-03-26 21:17:38
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_1.json
+  Task        : classification
+  Algorithm   : weka.classifiers.rules.ZeroR
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_211738/ZeroR/ZeroR.txt
+==================================================================
+
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: ckd
+
+Time taken to build model: 0.16 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         250               62.5    %
+Incorrectly Classified Instances       150               37.5    %
+Kappa statistic                          0     
+Mean absolute error                      0.4689
+Root mean squared error                  0.4841
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.625      1.000    0.769      ?        0.500     0.625     ckd
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.375     notckd
+Weighted Avg.    0.625    0.625    ?          0.625    ?          ?        0.500     0.531     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 250   0 |   a = ckd
+ 150   0 |   b = notckd
+
+Time taken to perform cross-validation: 0.01 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         250               62.5    %
+Incorrectly Classified Instances       150               37.5    %
+Kappa statistic                          0     
+Mean absolute error                      0.4689
+Root mean squared error                  0.4841
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.625      1.000    0.769      ?        0.500     0.625     ckd
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.375     notckd
+Weighted Avg.    0.625    0.625    ?          0.625    ?          ?        0.500     0.531     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 250   0 |   a = ckd
+ 150   0 |   b = notckd
+

@@ -1,0 +1,81 @@
+{
+    "task": "regression",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff"
+    },
+    "models": [
+        {
+            "name": "M5P_default",
+            "algorithm": "weka.classifiers.trees.M5P",
+            "options": []
+        },
+        {
+            "name": "M5P_M10",
+            "algorithm": "weka.classifiers.trees.M5P",
+            "options": ["-M", "10"]
+        },
+        {
+            "name": "M5P_M20",
+            "algorithm": "weka.classifiers.trees.M5P",
+            "options": ["-M", "20"]
+        },
+        {
+            "name": "M5P_M50",
+            "algorithm": "weka.classifiers.trees.M5P",
+            "options": ["-M", "50"]
+        },
+        {
+            "name": "M5P_unsmoothed",
+            "algorithm": "weka.classifiers.trees.M5P",
+            "options": ["-U"]
+        },
+        {
+            "name": "M5P_regression",
+            "algorithm": "weka.classifiers.trees.M5P",
+            "options": ["-R"]
+        },
+        {
+            "name": "M5P_M10_unsmoothed",
+            "algorithm": "weka.classifiers.trees.M5P",
+            "options": ["-M", "10", "-U"]
+        },
+        {
+            "name": "IBk_K1",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "1"]
+        },
+        {
+            "name": "IBk_K3",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "3"]
+        },
+        {
+            "name": "IBk_K5",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "5"]
+        },
+        {
+            "name": "IBk_K10",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "10"]
+        },
+        {
+            "name": "IBk_K5_inv",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "5", "-I"]
+        },
+        {
+            "name": "IBk_K10_inv",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "10", "-I"]
+        },
+        {
+            "name": "IBk_K5_cv",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "5", "-X"]
+        }
+    ]
+}

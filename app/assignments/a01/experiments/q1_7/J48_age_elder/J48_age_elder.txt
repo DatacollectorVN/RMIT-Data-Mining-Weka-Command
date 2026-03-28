@@ -1,0 +1,90 @@
+==================================================================
+  Weka Run Report — J48_age_elder
+==================================================================
+  Date        : 2026-03-26 23:16:53
+  Config      : /private/tmp/q1_7_age_elder.json
+  Task        : classification
+  Algorithm   : weka.classifiers.trees.J48
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q1_7_preprocessing/data/ckd_age_elder.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_231653/J48_age_elder/J48_age_elder.txt
+==================================================================
+
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+sc <= 1.2
+|   htn = yes: ckd (6.29)
+|   htn = no
+|   |   rbc = normal: notckd (32.32/3.32)
+|   |   rbc = abnormal: ckd (2.56/0.29)
+sc > 1.2: ckd (99.83/0.71)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	7
+
+
+Time taken to build model: 0.07 seconds
+
+Time taken to test model on training data: 0 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         137               97.1631 %
+Incorrectly Classified Instances         4                2.8369 %
+Kappa statistic                          0.9173
+Mean absolute error                      0.0559
+Root mean squared error                  0.1501
+Relative absolute error                 16.5793 %
+Root relative squared error             36.6729 %
+Total Number of Instances              141     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.973    0.033    0.991      0.973    0.982      0.918    0.997     0.999     ckd
+                 0.967    0.027    0.906      0.967    0.935      0.918    0.997     0.984     notckd
+Weighted Avg.    0.972    0.032    0.973      0.972    0.972      0.918    0.997     0.996     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 108   3 |   a = ckd
+   1  29 |   b = notckd
+
+Time taken to perform cross-validation: 0.01 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         136               96.4539 %
+Incorrectly Classified Instances         5                3.5461 %
+Kappa statistic                          0.8979
+Mean absolute error                      0.0586
+Root mean squared error                  0.177 
+Relative absolute error                 17.3645 %
+Root relative squared error             43.2477 %
+Total Number of Instances              141     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.964    0.033    0.991      0.964    0.977      0.900    0.979     0.995     ckd
+                 0.967    0.036    0.879      0.967    0.921      0.900    0.979     0.852     notckd
+Weighted Avg.    0.965    0.034    0.967      0.965    0.965      0.900    0.979     0.965     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 107   4 |   a = ckd
+   1  29 |   b = notckd
+

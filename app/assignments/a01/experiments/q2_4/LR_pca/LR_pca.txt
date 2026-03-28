@@ -1,0 +1,65 @@
+==================================================================
+  Weka Run Report — LR_pca
+==================================================================
+  Date        : 2026-03-28 10:49:57
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/run_pca.json
+  Task        : regression
+  Algorithm   : weka.classifiers.functions.LinearRegression
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/data/winequality_pca.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_104932/LR_pca/LR_pca.txt
+==================================================================
+
+Mar 28, 2026 10:49:57 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Mar 28, 2026 10:49:57 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Mar 28, 2026 10:49:57 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Mar 28, 2026 10:49:57 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+quality =
+
+     -0.0382 * -0.487total sulfur dioxide-0.431free sulfur dioxide+0.381volatile acidity-0.346residual sugar+0.294sulphates... +
+      0.1742 * -0.584density+0.465alcohol-0.336fixed acidity-0.33residual sugar-0.315chlorides... +
+      0.1508 * 0.591citric acid-0.455pH+0.434fixed acidity-0.307volatile acidity+0.261alcohol... +
+      0.1462 * 0.641sulphates+0.415pH+0.357free sulfur dioxide+0.264citric acid+0.245chlorides... +
+     -0.183  * 0.614chlorides-0.453pH-0.353residual sugar-0.307density+0.224free sulfur dioxide... +
+      0.1611 * 0.518alcohol+0.492volatile acidity+0.34 free sulfur dioxide+0.297sulphates-0.297pH... +
+     -0.105  * -0.525sulphates+0.419pH+0.389volatile acidity+0.381citric acid+0.299free sulfur dioxide... +
+     -0.1488 * -0.525residual sugar-0.472chlorides+0.401fixed acidity-0.399alcohol-0.293citric acid... +
+     -0.2933 * 0.497volatile acidity+0.403citric acid-0.367free sulfur dioxide-0.344fixed acidity+0.321total sulfur dioxide... +
+      5.8184
+
+Time taken to build model: 0.15 seconds
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.5395
+Mean absolute error                      0.5691
+Root mean squared error                  0.7352
+Relative absolute error                 83.015  %
+Root relative squared error             84.1988 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 0.1 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.537 
+Mean absolute error                      0.57  
+Root mean squared error                  0.7366
+Relative absolute error                 83.1212 %
+Root relative squared error             84.3481 %
+Total Number of Instances             6497     
+

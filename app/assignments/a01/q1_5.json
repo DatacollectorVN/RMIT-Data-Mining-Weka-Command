@@ -1,0 +1,36 @@
+{
+    "task": "classification",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff"
+    },
+    "models": [
+        {
+            "name": "NaiveBayes_default",
+            "algorithm": "weka.classifiers.bayes.NaiveBayes",
+            "options": []
+        },
+        {
+            "name": "NaiveBayes_kernel",
+            "algorithm": "weka.classifiers.bayes.NaiveBayes",
+            "options": ["-K"]
+        },
+        {
+            "name": "NaiveBayes_discretize",
+            "algorithm": "weka.classifiers.bayes.NaiveBayes",
+            "options": ["-D"]
+        },
+        {
+            "name": "RandomForest_100",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-I", "100", "-S", "42"]
+        },
+        {
+            "name": "RandomForest_200",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-I", "200", "-S", "42"]
+        }
+    ]
+}

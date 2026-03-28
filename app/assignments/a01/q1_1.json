@@ -1,0 +1,31 @@
+{
+    "task": "classification",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff"
+    },
+    "models": [
+        {
+            "name": "ZeroR",
+            "algorithm": "weka.classifiers.rules.ZeroR",
+            "options": []
+        },
+        {
+            "name": "OneR",
+            "algorithm": "weka.classifiers.rules.OneR",
+            "options": []
+        },
+        {
+            "name": "J48",
+            "algorithm": "weka.classifiers.trees.J48",
+            "options": []
+        },
+        {
+            "name": "IBk",
+            "algorithm": "weka.classifiers.lazy.IBk",
+            "options": ["-K", "10"]
+        }
+    ]
+}

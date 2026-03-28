@@ -1,0 +1,82 @@
+==================================================================
+  Weka Run Report — IBk_K50
+==================================================================
+  Date        : 2026-03-26 22:10:24
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/q1_4.json
+  Task        : classification
+  Algorithm   : weka.classifiers.lazy.IBk
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff
+  Folds       : 10
+  Options     : -K 50
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260326/20260326_221022/IBk_K50/IBk_K50.txt
+==================================================================
+
+
+Options: -K 50 
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 50 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.07 seconds
+
+Time taken to test model on training data: 0.04 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         302               75.5    %
+Incorrectly Classified Instances        98               24.5    %
+Kappa statistic                          0.5377
+Mean absolute error                      0.2324
+Root mean squared error                  0.4106
+Relative absolute error                 49.5679 %
+Root relative squared error             84.8028 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.608    0.000    1.000      0.608    0.756      0.606    0.994     0.995     ckd
+                 1.000    0.392    0.605      1.000    0.754      0.606    0.994     0.980     notckd
+Weighted Avg.    0.755    0.147    0.852      0.755    0.755      0.606    0.994     0.990     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 152  98 |   a = ckd
+   0 150 |   b = notckd
+
+Time taken to perform cross-validation: 0.16 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         294               73.5    %
+Incorrectly Classified Instances       106               26.5    %
+Kappa statistic                          0.5047
+Mean absolute error                      0.2469
+Root mean squared error                  0.4264
+Relative absolute error                 52.6586 %
+Root relative squared error             88.0806 %
+Total Number of Instances              400     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.576    0.000    1.000      0.576    0.731      0.581    0.984     0.988     ckd
+                 1.000    0.424    0.586      1.000    0.739      0.581    0.984     0.949     notckd
+Weighted Avg.    0.735    0.159    0.845      0.735    0.734      0.581    0.984     0.973     
+
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 144 106 |   a = ckd
+   0 150 |   b = notckd
+

@@ -1,0 +1,21 @@
+{
+    "task": "regression",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/data/winequality_corr8.arff"
+    },
+    "models": [
+        {
+            "name": "RF_corr8",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-I", "200"]
+        },
+        {
+            "name": "LR_corr8",
+            "algorithm": "weka.classifiers.functions.LinearRegression",
+            "options": []
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+==================================================================
+  Weka Run Report — LR_cfs
+==================================================================
+  Date        : 2026-03-28 10:08:26
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/run_cfs.json
+  Task        : regression
+  Algorithm   : weka.classifiers.functions.LinearRegression
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/data/winequality_cfs.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_100806/LR_cfs/LR_cfs.txt
+==================================================================
+
+Mar 28, 2026 10:08:26 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Mar 28, 2026 10:08:26 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Mar 28, 2026 10:08:26 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Mar 28, 2026 10:08:26 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+quality =
+
+     -1.3225 * volatile acidity +
+      0.3184 * alcohol +
+      2.9266
+
+Time taken to build model: 0.15 seconds
+
+Time taken to test model on training data: 0.02 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.5094
+Mean absolute error                      0.5871
+Root mean squared error                  0.7514
+Relative absolute error                 85.6371 %
+Root relative squared error             86.0526 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 0.13 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.5087
+Mean absolute error                      0.5873
+Root mean squared error                  0.7518
+Relative absolute error                 85.6509 %
+Root relative squared error             86.0818 %
+Total Number of Instances             6497     
+

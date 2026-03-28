@@ -1,0 +1,61 @@
+{
+    "task": "regression",
+    "save_model": false,
+    "evaluation": {
+        "mode": "cross-validation",
+        "folds": 10,
+        "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff"
+    },
+    "models": [
+        {
+            "name": "LR_default",
+            "algorithm": "weka.classifiers.functions.LinearRegression",
+            "options": []
+        },
+        {
+            "name": "LR_no_select",
+            "algorithm": "weka.classifiers.functions.LinearRegression",
+            "options": ["-S", "1"]
+        },
+        {
+            "name": "LR_greedy",
+            "algorithm": "weka.classifiers.functions.LinearRegression",
+            "options": ["-S", "2"]
+        },
+        {
+            "name": "LR_ridge1",
+            "algorithm": "weka.classifiers.functions.LinearRegression",
+            "options": ["-R", "1.0"]
+        },
+        {
+            "name": "LR_ridge0001",
+            "algorithm": "weka.classifiers.functions.LinearRegression",
+            "options": ["-R", "0.001"]
+        },
+        {
+            "name": "RF_default",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": []
+        },
+        {
+            "name": "RF_50",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-I", "50"]
+        },
+        {
+            "name": "RF_200",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-I", "200"]
+        },
+        {
+            "name": "RF_K5",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-K", "5"]
+        },
+        {
+            "name": "RF_Kall",
+            "algorithm": "weka.classifiers.trees.RandomForest",
+            "options": ["-K", "11"]
+        }
+    ]
+}

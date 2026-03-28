@@ -1,0 +1,12 @@
+{
+  "task": "preprocess",
+  "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff",
+  "is_debug": false,
+  "steps": [
+    {
+      "name": "keep_bp_normal",
+      "filter": "weka.filters.unsupervised.instance.RemoveWithValues",
+      "options": ["-C", "2", "-S", "90", "-V"]
+    }
+  ]
+}

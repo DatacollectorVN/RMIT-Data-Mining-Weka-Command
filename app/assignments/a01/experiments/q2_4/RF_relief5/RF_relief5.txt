@@ -1,0 +1,50 @@
+==================================================================
+  Weka Run Report — RF_relief5
+==================================================================
+  Date        : 2026-03-28 10:08:26
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/run_relief5.json
+  Task        : regression
+  Algorithm   : weka.classifiers.trees.RandomForest
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/data/winequality_relief5.arff
+  Folds       : 10
+  Options     : -I 200
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_100826/RF_relief5/RF_relief5.txt
+==================================================================
+
+
+Options: -I 200 
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 200 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 2.23 seconds
+
+Time taken to test model on training data: 0.8 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.9757
+Mean absolute error                      0.1586
+Root mean squared error                  0.2284
+Relative absolute error                 23.1363 %
+Root relative squared error             26.1524 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 16.68 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.6949
+Mean absolute error                      0.4418
+Root mean squared error                  0.6283
+Relative absolute error                 64.4348 %
+Root relative squared error             71.9421 %
+Total Number of Instances             6497     
+

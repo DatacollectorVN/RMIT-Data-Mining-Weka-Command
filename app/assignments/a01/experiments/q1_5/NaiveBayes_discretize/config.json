@@ -1,0 +1,18 @@
+{
+  "task": "classification",
+  "save_model": false,
+  "evaluation": {
+    "mode": "cross-validation",
+    "folds": 10,
+    "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff"
+  },
+  "models": [
+    {
+      "name": "NaiveBayes_discretize",
+      "algorithm": "weka.classifiers.bayes.NaiveBayes",
+      "options": [
+        "-D"
+      ]
+    }
+  ]
+}

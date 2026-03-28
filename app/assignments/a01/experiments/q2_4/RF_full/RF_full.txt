@@ -1,0 +1,50 @@
+==================================================================
+  Weka Run Report — RF_full
+==================================================================
+  Date        : 2026-03-28 10:07:37
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4.json
+  Task        : regression
+  Algorithm   : weka.classifiers.trees.RandomForest
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff
+  Folds       : 10
+  Options     : -I 200
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_100737/RF_full/RF_full.txt
+==================================================================
+
+
+Options: -I 200 
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 200 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 2.45 seconds
+
+Time taken to test model on training data: 0.49 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.9799
+Mean absolute error                      0.149 
+Root mean squared error                  0.2137
+Relative absolute error                 21.7308 %
+Root relative squared error             24.4765 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 21.22 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.7458
+Mean absolute error                      0.4129
+Root mean squared error                  0.5858
+Relative absolute error                 60.2154 %
+Root relative squared error             67.0792 %
+Total Number of Instances             6497     
+

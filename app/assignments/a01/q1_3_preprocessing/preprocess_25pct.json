@@ -1,0 +1,12 @@
+{
+  "task": "preprocess",
+  "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff",
+  "is_debug": false,
+  "steps": [
+    {
+      "name": "resample_25pct",
+      "filter": "weka.filters.unsupervised.instance.Resample",
+      "options": ["-Z", "25", "-no-replacement", "-S", "42"]
+    }
+  ]
+}

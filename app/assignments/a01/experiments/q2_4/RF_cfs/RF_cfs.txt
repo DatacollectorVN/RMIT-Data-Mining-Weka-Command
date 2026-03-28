@@ -1,0 +1,50 @@
+==================================================================
+  Weka Run Report — RF_cfs
+==================================================================
+  Date        : 2026-03-28 10:08:06
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/run_cfs.json
+  Task        : regression
+  Algorithm   : weka.classifiers.trees.RandomForest
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/data/winequality_cfs.arff
+  Folds       : 10
+  Options     : -I 200
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_100806/RF_cfs/RF_cfs.txt
+==================================================================
+
+
+Options: -I 200 
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 200 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 1.87 seconds
+
+Time taken to test model on training data: 1.09 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.9716
+Mean absolute error                      0.1669
+Root mean squared error                  0.2427
+Relative absolute error                 24.3446 %
+Root relative squared error             27.7993 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 16.95 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.661 
+Mean absolute error                      0.4607
+Root mean squared error                  0.6556
+Relative absolute error                 67.1949 %
+Root relative squared error             75.0702 %
+Total Number of Instances             6497     
+

@@ -1,0 +1,50 @@
+==================================================================
+  Weka Run Report — RF_corr8
+==================================================================
+  Date        : 2026-03-28 10:08:47
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/run_corr8.json
+  Task        : regression
+  Algorithm   : weka.classifiers.trees.RandomForest
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/data/winequality_corr8.arff
+  Folds       : 10
+  Options     : -I 200
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_100847/RF_corr8/RF_corr8.txt
+==================================================================
+
+
+Options: -I 200 
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 200 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 2.49 seconds
+
+Time taken to test model on training data: 0.47 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.9784
+Mean absolute error                      0.1541
+Root mean squared error                  0.2199
+Relative absolute error                 22.4812 %
+Root relative squared error             25.1865 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 20 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.7256
+Mean absolute error                      0.4282
+Root mean squared error                  0.6032
+Relative absolute error                 62.4413 %
+Root relative squared error             69.0747 %
+Total Number of Instances             6497     
+

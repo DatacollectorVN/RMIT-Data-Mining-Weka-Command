@@ -1,0 +1,21 @@
+{
+  "task": "classification",
+  "save_model": false,
+  "evaluation": {
+    "mode": "cross-validation",
+    "folds": 10,
+    "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff"
+  },
+  "models": [
+    {
+      "name": "J48_C0.25_M2",
+      "algorithm": "weka.classifiers.trees.J48",
+      "options": [
+        "-C",
+        "0.25",
+        "-M",
+        "2"
+      ]
+    }
+  ]
+}

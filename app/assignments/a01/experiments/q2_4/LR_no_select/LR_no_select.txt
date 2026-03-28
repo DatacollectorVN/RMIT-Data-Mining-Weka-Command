@@ -1,0 +1,70 @@
+==================================================================
+  Weka Run Report — LR_no_select
+==================================================================
+  Date        : 2026-03-28 09:27:02
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_3.json
+  Task        : regression
+  Algorithm   : weka.classifiers.functions.LinearRegression
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff
+  Folds       : 10
+  Options     : -S 1
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_092701/LR_no_select/LR_no_select.txt
+==================================================================
+
+Mar 28, 2026 9:27:03 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Mar 28, 2026 9:27:03 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Mar 28, 2026 9:27:03 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Mar 28, 2026 9:27:03 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+Options: -S 1 
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+quality =
+
+      0.0677 * fixed acidity +
+     -1.3279 * volatile acidity +
+     -0.1097 * citric acid +
+      0.0436 * residual sugar +
+     -0.4837 * chlorides +
+      0.006  * free sulfur dioxide +
+     -0.0025 * total sulfur dioxide +
+    -54.9669 * density +
+      0.4393 * pH +
+      0.7683 * sulphates +
+      0.267  * alcohol +
+     55.7627
+
+Time taken to build model: 0.38 seconds
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.5405
+Mean absolute error                      0.5683
+Root mean squared error                  0.7347
+Relative absolute error                 82.8991 %
+Root relative squared error             84.1346 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 0.12 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.5372
+Mean absolute error                      0.5694
+Root mean squared error                  0.7365
+Relative absolute error                 83.0431 %
+Root relative squared error             84.3311 %
+Total Number of Instances             6497     
+

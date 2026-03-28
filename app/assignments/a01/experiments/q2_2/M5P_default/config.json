@@ -1,0 +1,16 @@
+{
+  "task": "regression",
+  "save_model": false,
+  "evaluation": {
+    "mode": "cross-validation",
+    "folds": 10,
+    "dataset": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff"
+  },
+  "models": [
+    {
+      "name": "M5P_default",
+      "algorithm": "weka.classifiers.trees.M5P",
+      "options": []
+    }
+  ]
+}

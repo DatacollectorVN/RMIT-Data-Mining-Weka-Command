@@ -1,0 +1,48 @@
+==================================================================
+  Weka Run Report — IBk_K3
+==================================================================
+  Date        : 2026-03-28 08:56:58
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_2.json
+  Task        : regression
+  Algorithm   : weka.classifiers.lazy.IBk
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff
+  Folds       : 10
+  Options     : -K 3
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_085643/IBk_K3/IBk_K3.txt
+==================================================================
+
+
+Options: -K 3 
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 3 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.09 seconds
+
+Time taken to test model on training data: 1.02 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.8224
+Mean absolute error                      0.3295
+Root mean squared error                  0.4971
+Relative absolute error                 48.0602 %
+Root relative squared error             56.9322 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 1.07 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.6023
+Mean absolute error                      0.5094
+Root mean squared error                  0.7153
+Relative absolute error                 74.2875 %
+Root relative squared error             81.9085 %
+Total Number of Instances             6497     
+

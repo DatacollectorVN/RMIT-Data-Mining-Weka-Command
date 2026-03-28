@@ -1,0 +1,67 @@
+==================================================================
+  Weka Run Report — LR_with_type
+==================================================================
+  Date        : 2026-03-28 10:12:40
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/run_with_type.json
+  Task        : regression
+  Algorithm   : weka.classifiers.functions.LinearRegression
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_4_preprocessing/data/winequality_with_type.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260328/20260328_101216/LR_with_type/LR_with_type.txt
+==================================================================
+
+Mar 28, 2026 10:12:40 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+Mar 28, 2026 10:12:40 AM com.github.fommil.netlib.BLAS <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Mar 28, 2026 10:12:40 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+Mar 28, 2026 10:12:40 AM com.github.fommil.netlib.LAPACK <clinit>
+WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+quality =
+
+      0.0824 * fixed acidity +
+     -1.4711 * volatile acidity +
+      0.0626 * residual sugar +
+     -0.8007 * chlorides +
+      0.0049 * free sulfur dioxide +
+     -0.0014 * total sulfur dioxide +
+   -104.5741 * density +
+      0.5044 * pH +
+      0.7186 * sulphates +
+      0.221  * alcohol +
+     -0.3655 * wine_type=white +
+    105.4133
+
+Time taken to build model: 0.15 seconds
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0.5445
+Mean absolute error                      0.5686
+Root mean squared error                  0.7324
+Relative absolute error                 82.9454 %
+Root relative squared error             83.8768 %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 0.1 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                  0.5404
+Mean absolute error                      0.5699
+Root mean squared error                  0.7347
+Relative absolute error                 83.1191 %
+Root relative squared error             84.1263 %
+Total Number of Instances             6497     
+

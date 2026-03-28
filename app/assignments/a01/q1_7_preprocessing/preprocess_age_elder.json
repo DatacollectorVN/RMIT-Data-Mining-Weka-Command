@@ -1,0 +1,12 @@
+{
+  "task": "preprocess",
+  "input": "/Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/chronic_kidney_disease.arff",
+  "is_debug": false,
+  "steps": [
+    {
+      "name": "keep_age_elder",
+      "filter": "weka.filters.unsupervised.instance.RemoveWithValues",
+      "options": ["-C", "1", "-S", "60.5"]
+    }
+  ]
+}

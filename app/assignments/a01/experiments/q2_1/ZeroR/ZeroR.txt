@@ -1,0 +1,43 @@
+==================================================================
+  Weka Run Report — ZeroR
+==================================================================
+  Date        : 2026-03-27 23:29:20
+  Config      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/app/assignments/a01/q2_1.json
+  Task        : regression
+  Algorithm   : weka.classifiers.rules.ZeroR
+  Eval Mode   : cross-validation
+  Dataset     : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/data/winequality-full.arff
+  Folds       : 10
+  Report      : /Users/nhan.ngo/rmit/RMIT-Data-Mining-Weka-Command/.rmit_reports/20260327/20260327_232920/ZeroR/ZeroR.txt
+==================================================================
+
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: 5.818377712790519
+
+Time taken to build model: 0.1 seconds
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Error on training data ===
+
+Correlation coefficient                  0     
+Mean absolute error                      0.6856
+Root mean squared error                  0.8732
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances             6497     
+
+Time taken to perform cross-validation: 0.03 seconds
+
+
+=== Cross-validation ===
+
+Correlation coefficient                 -0.0365
+Mean absolute error                      0.6857
+Root mean squared error                  0.8733
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances             6497     
+
